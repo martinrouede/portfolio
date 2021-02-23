@@ -8,22 +8,25 @@ import SwitchTheme from './components/SwitchTheme';
 import Projects from './components/Projects';
 import Contacts from './components/Contacts';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-      textAlign: 'center',
-      minHeight: '90vh',
-      display: 'flex',
-      flexDirection: 'column'
+    textAlign: 'center',
+    height: window.innerHeight,
+    width: window.innerWidth,
+    display: 'flex',
+    flexDirection: 'column',
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2)
   }
 }));
 
-const App = (props) => {
+const App = () => {
 
   const classes = useStyles();
 
   const [themeMode, setThemeMode] = useState(false);
 
-  const theme = React.useMemo(
+  var theme = React.useMemo(
     () =>
       createMuiTheme({
         palette: {
@@ -42,7 +45,6 @@ const App = (props) => {
         <Contacts />
       </ThemeProvider>
     </div>
-
   );
 }
 

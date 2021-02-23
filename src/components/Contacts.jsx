@@ -2,17 +2,20 @@ import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import {
+    faTwitter,
+    faInstagram,
+    faFacebook,
+    faTelegram,
+    faLinkedin,
+    faGithub,
+    faDiscord
+} from '@fortawesome/free-brands-svg-icons';
 
 const useStyles = makeStyles((theme) => ({
     infoContact: {
         marginTop: 'auto',
-        marginBottom: theme.spacing(3),
         fontSize: '3em',
     },
     icon: {
@@ -25,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const Contacts = params => {
+const Contacts = () => {
 
     const classes = useStyles();
 
@@ -39,6 +42,12 @@ const Contacts = params => {
             </Link>
             <Link href='https://github.com/martinrouede/'>
                 <FontAwesomeIcon icon={faGithub} className={classes.icon} />
+            </Link>
+            <Link href='https://t.me/martinrouede/'>
+                <FontAwesomeIcon icon={faTelegram} className={classes.icon} />
+            </Link>
+            <Link href='https://discordapp.com/users/479841671950106658/'>
+                <FontAwesomeIcon icon={faDiscord} className={classes.icon} />
             </Link>
             <Link href='https://twitter.com/martinrouede/'>
                 <FontAwesomeIcon icon={faTwitter} className={classes.icon} />
