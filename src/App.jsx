@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -8,15 +8,14 @@ import SwitchTheme from './components/SwitchTheme';
 import Projects from './components/Projects';
 import Contacts from './components/Contacts';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
+const useStyles = makeStyles((theme,) => ({
+  App: {
     textAlign: 'center',
-    height: window.innerHeight,
-    width: window.innerWidth,
     display: 'flex',
+    height: '100vh',
+    width: '99vw',
     flexDirection: 'column',
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2)
+    padding: theme.spacing(2)
   }
 }));
 
@@ -37,7 +36,7 @@ const App = () => {
   );
 
   return (
-    <div className={classes.root}>
+    <div className={classes.App}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <SwitchTheme themeMode={themeMode} setThemeMode={setThemeMode} />

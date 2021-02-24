@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
     grid: {
         flexGrow: 1,
         justifyContent: 'center',
-        marginTop: theme.spacing(5)
+        marginTop: theme.spacing(5),
+        marginBottom: theme.spacing(5)
     },
     gridItem: {
         width: '20%',
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
             padding: theme.spacing(1),
         },
         [theme.breakpoints.up('md')]: {
-            padding: theme.spacing(2),
+            padding: theme.spacing(1),
         },
         [theme.breakpoints.up('lg')]: {
             padding: theme.spacing(3),

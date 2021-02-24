@@ -12,7 +12,7 @@ const Projects = () => {
     const classes = styles.useStyles();
 
     return (
-        <div>
+        <>
             <Typography className={classes.title}>Personal Projects</Typography>
             <Grid container className={classes.grid} spacing={5}>
                 <Grid item className={classes.gridItem}>
@@ -24,7 +24,7 @@ const Projects = () => {
                     </Link>
                 </Grid>
                 <Grid item className={classes.gridItem}>
-                    <Link href='https://mail.google.com/mail/u/0/?view=cm&fs=1&to=martinrouede1@gmail.com&tf=1'>
+                    <Link href='https://ctrlacc.mdn.unp.edu.ar:25001'>
                         <Paper className={classes.paper}>
                             <Typography className={classes.titlePaper}>cuidAR-UNPSJB</Typography>
                             <img src={UNPSJBLogo} className={classes.cuidar} />
@@ -32,7 +32,7 @@ const Projects = () => {
                     </Link>
                 </Grid>
             </Grid>
-        </div>
+        </>
     );
 }
 
