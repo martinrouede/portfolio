@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
         top: 'auto',
         bottom: 0,
         padding: theme.spacing(1),
+        backgroundColor: theme.palette.type === 'light' ? theme.palette.info.light : theme.palette.info.dark,
         color: theme.palette.text.primary,
     },
     title: {
