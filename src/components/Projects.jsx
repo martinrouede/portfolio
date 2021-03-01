@@ -13,7 +13,6 @@ const Projects = () => {
 
     return (
         <>
-            <Typography className={classes.title}>Personal Projects</Typography>
             <Grid container className={classes.grid} spacing={5}>
                 <Grid item className={classes.gridItem}>
                     <Link href='https://gitlabchart.web.app'>

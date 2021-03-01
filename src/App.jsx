@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import SwitchTheme from './components/SwitchTheme';
+import Header from './components/Header';
 import Projects from './components/Projects';
 import Contacts from './components/Contacts';
 
@@ -39,7 +39,7 @@ const App = () => {
     <div className={classes.App}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <SwitchTheme themeMode={themeMode} setThemeMode={setThemeMode} />
+        <Header themeMode={themeMode} setThemeMode={setThemeMode} />
         <Projects />
         <Contacts />
       </ThemeProvider>
