@@ -45,6 +45,9 @@ const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(3),
         marginBottom: theme.spacing(2),
         color: theme.palette.text.primary,
+        '&:hover': {
+            color: theme.palette.text.secondary,
+        }
     }
 }));
 
