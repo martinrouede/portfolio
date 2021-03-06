@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'row',
         justifyContent: 'center',
         padding: theme.spacing(2),
-        backgroundColor: theme.palette.type === 'light' ? theme.palette.info.light : theme.palette.info.dark,
+        backgroundColor: theme.palette.type === 'light' ? theme.palette.success.light : theme.palette.success.dark,
         color: theme.palette.text.primary,
     },
     title: {

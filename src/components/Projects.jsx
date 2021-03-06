@@ -16,7 +16,7 @@ const Projects = () => {
             <Grid container className={classes.grid} spacing={5}>
                 <Grid item className={classes.gridItem}>
                     <Link href='https://gitlabchart.web.app'>
-                        <Paper className={classes.paper}>
+                        <Paper className={classes.paper} elevation={5} >
                             <Typography className={classes.titlePaper}>GitLabChart</Typography>
                             <img src={GitLabChartLogo} className={classes.gitlabchart} />
                         </Paper>
@@ -24,7 +24,7 @@ const Projects = () => {
                 </Grid>
                 <Grid item className={classes.gridItem}>
                     <Link href='https://ctrlacc.mdn.unp.edu.ar:25001'>
-                        <Paper className={classes.paper}>
+                        <Paper className={classes.paper} elevation={5} >
                             <Typography className={classes.titlePaper}>cuidAR-UNPSJB</Typography>
                             <img src={UNPSJBLogo} className={classes.cuidar} />
                         </Paper>
