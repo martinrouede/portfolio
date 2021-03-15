@@ -23,13 +23,15 @@ const App = () => {
 
   const classes = useStyles();
 
-  const [themeMode, setThemeMode] = useState(false);
+  const [themeMode, setThemeMode] = useState(true);
 
   var theme = React.useMemo(
     () =>
       createMuiTheme({
         palette: {
           type: themeMode ? 'dark' : 'light',
+          primary: { main: '#1E77A5' },
+          secondary: { main: '#6AF2D8' }
         },
       }),
     [themeMode],

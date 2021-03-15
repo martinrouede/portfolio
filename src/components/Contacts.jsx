@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         top: 'auto',
         bottom: 0,
         padding: theme.spacing(1),
-        backgroundColor: theme.palette.type === 'light' ? theme.palette.success.light : theme.palette.success.dark,
+        backgroundColor: theme.palette.type === 'light' ? theme.palette.primary.light : theme.palette.primary.dark,
         color: theme.palette.text.primary,
     },
     title: {
@@ -60,28 +60,28 @@ const Contacts = () => {
             <AppBar className={classes.appBar}>
                 <Typography className={classes.title}>Contact Me</Typography>
                 <div>
-                    <Link href='https://www.linkedin.com/in/martinrouede/'>
+                    <Link href={`https://www.linkedin.com/in/${process.env.REACT_APP_USER_LINKEDIN}/`}>
                         <FontAwesomeIcon icon={faLinkedin} className={classes.icon} />
                     </Link>
-                    <Link href='https://github.com/martinrouede/'>
+                    <Link href={`https://github.com/${process.env.REACT_APP_USER_GITHUB}/`}>
                         <FontAwesomeIcon icon={faGithub} className={classes.icon} />
                     </Link>
-                    <Link href='https://mail.google.com/mail/u/0/?view=cm&fs=1&to=martinrouede1@gmail.com&tf=1'>
+                    <Link href={`https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${process.env.REACT_APP_USER_GMAIL}&tf=1`}>
                         <FontAwesomeIcon icon={faEnvelope} className={classes.icon} />
                     </Link>
-                    <Link href='https://t.me/martinrouede/'>
+                    <Link href={`https://t.me/${process.env.REACT_APP_USER_TELEGRAM}/`}>
                         <FontAwesomeIcon icon={faTelegram} className={classes.icon} />
                     </Link>
-                    <Link href='https://discordapp.com/users/479841671950106658/'>
+                    <Link href={`https://discordapp.com/users/${process.env.REACT_APP_USER_DISCORD}/`}>
                         <FontAwesomeIcon icon={faDiscord} className={classes.icon} />
                     </Link>
-                    <Link href='https://twitter.com/martinrouede/'>
+                    <Link href={`https://twitter.com/${process.env.REACT_APP_USER_TWITTER}/`}>
                         <FontAwesomeIcon icon={faTwitter} className={classes.icon} />
                     </Link>
-                    <Link href='https://www.instagram.com/martinrouede/'>
+                    <Link href={`https://www.instagram.com/${process.env.REACT_APP_USER_INSTAGRAM}/`}>
                         <FontAwesomeIcon icon={faInstagram} className={classes.icon} />
                     </Link>
-                    <Link href='https://www.facebook.com/martinrouede/'>
+                    <Link href={`https://www.facebook.com/${process.env.REACT_APP_USER_FACEBOOK}/`}>
                         <FontAwesomeIcon icon={faFacebook} className={classes.icon} />
                     </Link>
                 </div>

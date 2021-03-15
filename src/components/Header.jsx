@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'row',
         justifyContent: 'center',
         padding: theme.spacing(2),
-        backgroundColor: theme.palette.type === 'light' ? theme.palette.success.light : theme.palette.success.dark,
+        backgroundColor: theme.palette.type === 'light' ? theme.palette.primary.light : theme.palette.primary.dark,
         color: theme.palette.text.primary,
     },
     title: {
@@ -36,7 +36,7 @@ const Header = params => {
         <>
             <AppBar className={classes.appBar}>
                 <Grid container direction='row' justify='center' alignItems='center'>
-                    <Typography className={classes.title}>Martin Rouede - My Personal Projects</Typography>
+                    <Typography className={classes.title}>{process.env.REACT_APP_MY_NAME} - My Personal Projects</Typography>
                 </Grid>
                 <Grid container direction='row' justify='flex-end' alignItems='center'>
                     <SwitchTheme themeMode={params.themeMode} setThemeMode={params.setThemeMode} />
