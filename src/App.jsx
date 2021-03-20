@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -8,7 +8,9 @@ import Header from './components/Header';
 import Projects from './components/Projects';
 import Contacts from './components/Contacts';
 
-const useStyles = makeStyles((theme,) => ({
+const properties = require('./properties');
+
+const useStyles = makeStyles((theme) => ({
   App: {
     textAlign: 'center',
     display: 'flex',
@@ -22,7 +24,7 @@ const useStyles = makeStyles((theme,) => ({
 const App = () => {
 
   const classes = useStyles();
-
+  const [userContacts, setUserContacts] = useState([]);
   const [themeMode, setThemeMode] = useState(true);
 
   var theme = React.useMemo(
@@ -41,9 +43,9 @@ const App = () => {
     <div className={classes.App}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Header themeMode={themeMode} setThemeMode={setThemeMode} />
-        <Projects />
-        <Contacts />
+        <Header themeMode={themeMode} setThemeMode={setThemeMode} name={properties.myName} />
+        <Projects projects={properties.projects}/>
+        <Contacts contacts={properties.contacts} />
       </ThemeProvider>
     </div>
   );

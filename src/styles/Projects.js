@@ -47,20 +47,6 @@ const useStyles = makeStyles((theme) => ({
             width: '150px',
             height: '150px'
         },
-    },
-    cuidar: {
-        [theme.breakpoints.down('sm')]: {
-            width: '80px',
-            height: '100px'
-        },
-        [theme.breakpoints.up('md')]: {
-            width: '100px',
-            height: '120px'
-        },
-        [theme.breakpoints.up('lg')]: {
-            width: '130px',
-            height: '150px'
-        },
     }
 }));
 

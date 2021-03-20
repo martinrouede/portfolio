@@ -36,7 +36,7 @@ const Header = params => {
         <>
             <AppBar className={classes.appBar}>
                 <Grid container direction='row' justify='center' alignItems='center'>
-                    <Typography className={classes.title}>{process.env.REACT_APP_MY_NAME} - My Personal Projects</Typography>
+                    <Typography className={classes.title}>{params.name} - My Personal Projects</Typography>
                 </Grid>
                 <Grid container direction='row' justify='flex-end' alignItems='center'>
                     <SwitchTheme themeMode={params.themeMode} setThemeMode={params.setThemeMode} />

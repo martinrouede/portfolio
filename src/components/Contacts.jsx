@@ -1,19 +1,13 @@
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import {
-    faTwitter,
-    faInstagram,
-    faFacebook,
-    faTelegram,
-    faLinkedin,
-    faGithub,
-    faDiscord
-} from '@fortawesome/free-brands-svg-icons';
+library.add(fab);
 
 const useStyles = makeStyles((theme) => ({
     infoContact: {
@@ -51,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const Contacts = () => {
+const Contacts = (params) => {
 
     const classes = useStyles();
 
@@ -60,30 +54,11 @@ const Contacts = () => {
             <AppBar className={classes.appBar}>
                 <Typography className={classes.title}>Contact Me</Typography>
                 <div>
-                    <Link href={`https://www.linkedin.com/in/${process.env.REACT_APP_USER_LINKEDIN}/`}>
-                        <FontAwesomeIcon icon={faLinkedin} className={classes.icon} />
-                    </Link>
-                    <Link href={`https://github.com/${process.env.REACT_APP_USER_GITHUB}/`}>
-                        <FontAwesomeIcon icon={faGithub} className={classes.icon} />
-                    </Link>
-                    <Link href={`https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${process.env.REACT_APP_USER_GMAIL}&tf=1`}>
-                        <FontAwesomeIcon icon={faEnvelope} className={classes.icon} />
-                    </Link>
-                    <Link href={`https://t.me/${process.env.REACT_APP_USER_TELEGRAM}/`}>
-                        <FontAwesomeIcon icon={faTelegram} className={classes.icon} />
-                    </Link>
-                    <Link href={`https://discordapp.com/users/${process.env.REACT_APP_USER_DISCORD}/`}>
-                        <FontAwesomeIcon icon={faDiscord} className={classes.icon} />
-                    </Link>
-                    <Link href={`https://twitter.com/${process.env.REACT_APP_USER_TWITTER}/`}>
-                        <FontAwesomeIcon icon={faTwitter} className={classes.icon} />
-                    </Link>
-                    <Link href={`https://www.instagram.com/${process.env.REACT_APP_USER_INSTAGRAM}/`}>
-                        <FontAwesomeIcon icon={faInstagram} className={classes.icon} />
-                    </Link>
-                    <Link href={`https://www.facebook.com/${process.env.REACT_APP_USER_FACEBOOK}/`}>
-                        <FontAwesomeIcon icon={faFacebook} className={classes.icon} />
-                    </Link>
+                    {params.contacts.map((aContact) => (
+                        <Link href={`${aContact.url}${aContact.user}/`} key={aContact.name}>
+                            <FontAwesomeIcon icon={['fab', aContact.name]} className={classes.icon} />
+                        </Link>
+                    ))}
                 </div>
             </AppBar>
         </div>
