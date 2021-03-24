@@ -18,15 +18,18 @@ Go to the root of repo and execute `npm install` for install all dependencies an
 
 This app is configure with my data, but you can easily modify it editing metadata.
 
-* Change icon: In *public/favicon.ico* you can see the icon of the app.
+* ***Change icon***: In *public/favicon.ico* you can see the icon of the app.
 
-* Change title: In *public/index.html* you can modify`<title>my title</title>`.
+
+* ***Change title***: In *public/index.html* you can modify`<title>my title</title>`.
 
   And in *public/manifest.json* you can modify the name of the app.
 
-* Edit name: In *src/properties.js* you can modify the **myName** attribute that changes the title in the app bar.
 
-* Edit contacts: In *src/properties.js* you can modify the **contacts** attribute.
+* ***Edit name***: In *src/properties.js* you can modify the **myName** attribute that changes the title in the app bar.
+
+
+* ***Edit contacts***: In *src/properties.js* you can modify the **contacts** attribute.
 
   * The **name** attr is the name of the social network.
 
@@ -38,7 +41,8 @@ This app is configure with my data, but you can easily modify it editing metadat
 
   * The **url** attr is URL that the social network has to display the user's profile.
 
-* Edit projects: In *src/properties.js* you can modify the **projects** attribute.
+
+* ***Edit projects***: In *src/properties.js* you can modify the **projects** attribute.
 
   * The **name** attr is the title that you see.
 
