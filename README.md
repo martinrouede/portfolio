@@ -1,7 +1,6 @@
 # Portfolio
 
 Portfolio is an app that shows your own personal projects and your social networks to contact him.
-
 It's made in [React.js](https://reactjs.org/).
 
 ## Installation
@@ -16,7 +15,7 @@ Go to the root of repo and execute `npm install` for install all dependencies an
 
 ## Configure
 
-This app is configure with my data, but you can easily modify it. All metadata is in the file *src/properties.js* where you can edit the JSON, configuring your name, your contacts and your projects. And in *public/manifest.json* you can edit the name of the app
+This app is configure with my data, but you can easily modify it.
 
 * Change icon: In *public/favicon.ico* you can see the icon of the app.
 
