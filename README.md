@@ -1,6 +1,8 @@
 # Portfolio
 
-Portfolio is an app that shows your own personal projects and your social networks to contact him. It's made in [React.js](https://reactjs.org/).
+Portfolio is an app that shows your own personal projects and your social networks to contact him.
+
+It's made in [React.js](https://reactjs.org/).
 
 ## Installation
 
