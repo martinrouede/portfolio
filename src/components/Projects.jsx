@@ -18,7 +18,7 @@ const Projects = (params) => {
                         <Link href={aProject.url}>
                             <Paper className={classes.paper} elevation={5} >
                                 <Typography className={classes.titlePaper}>{aProject.name}</Typography>
-                                <img src={require(`../logos/${aProject.icon}`).default} className={classes.gitlabchart} />
+                                <img src={require(`../logos/${aProject.icon}`).default} className={classes.icon} />
                             </Paper>
                         </Link>
                     </Grid>

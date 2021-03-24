@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '1.3rem',
         },
     },
-    gitlabchart: {
+    icon: {
         [theme.breakpoints.down('sm')]: {
             width: '100px',
             height: '100px'
