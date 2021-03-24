@@ -21,7 +21,8 @@ This app is configure with my data, but you can easily modify it editing metadat
 * Change icon: In *public/favicon.ico* you can see the icon of the app.
 
 * Change title: In *public/index.html* you can modify`<title>my title</title>`.
-And in *public/manifest.json* you can modify the name of the app.
+
+  And in *public/manifest.json* you can modify the name of the app.
 
 * Edit name: In *src/properties.js* you can modify the **myName** attribute that changes the title in the app bar.
 
@@ -29,9 +30,9 @@ And in *public/manifest.json* you can modify the name of the app.
 
   * The **name** attr is the name of the social network.
 
-  This is important to define correctly because this name is used to import the brand's icon.
+    This is important to define correctly because this name is used to import the brand's icon.
   
-  The source of the icons is [Font Awesome](https://fontawesome.com/).
+    The source of the icons is [Font Awesome](https://fontawesome.com/).
   
   * The **user** attr is your username/ID (depends social network) what you have in this.
 
@@ -43,7 +44,8 @@ And in *public/manifest.json* you can modify the name of the app.
 
   * The **url** attr is the URL to redirect when you click on it.
 
-  * The **icon** attr is the name of the file with the icon you want to show for this project. Remember that the icon must be in *src/logos/*.
+  * The **icon** attr is the name of the file with the icon you want to show for this project.
+    Remember that the icon must be in *src/logos/*.
 
 ## Usage
 
