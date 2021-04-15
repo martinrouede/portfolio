@@ -10,7 +10,8 @@ module.exports = {
         { name: 'facebook', user: 'martinrouede', url: 'https://www.facebook.com/' },
     ],
     projects: [
-        { name: 'GitLabChart', url: 'https://gitlabchart.web.app', icon: 'GitLabChart-logo.png' },
+        { name: 'GitLabChart', url: 'https://github.com/martinrouede/gitlabchart', icon: 'GitLabChart-logo.png' },
+        { name: 'MarketList', url: 'https://github.com/martinrouede/MarketList', icon: 'MarketList-logo.png' },
     ]
 }
 
