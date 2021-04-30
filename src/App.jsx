@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -24,16 +24,15 @@ const useStyles = makeStyles((theme) => ({
 const App = () => {
 
   const classes = useStyles();
-  const [userContacts, setUserContacts] = useState([]);
-  const [themeMode, setThemeMode] = useState(true);
+  const [themeMode, setThemeMode] = React.useState(true);
 
   var theme = React.useMemo(
     () =>
       createMuiTheme({
         palette: {
           type: themeMode ? 'dark' : 'light',
-          primary: { main: '#1E77A5' },
-          secondary: { main: '#6AF2D8' }
+          primary: { main: '#4483D4' },
+          secondary: { main: '#44D4A6' }
         },
       }),
     [themeMode],

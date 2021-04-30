@@ -12,7 +12,10 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'row',
         justifyContent: 'center',
         padding: theme.spacing(2),
-        backgroundColor: theme.palette.type === 'light' ? theme.palette.primary.light : theme.palette.primary.dark,
+        background: theme.palette.type === 'dark' ?
+            `linear-gradient(45deg, ${theme.palette.secondary.dark} 15%, ${theme.palette.primary.dark} 95%)`
+            :
+            `linear-gradient(45deg, ${theme.palette.secondary.light} 15%, ${theme.palette.primary.light} 95%)`,
         color: theme.palette.text.primary,
     },
     title: {
