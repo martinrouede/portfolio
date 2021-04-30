@@ -19,9 +19,9 @@ const useStyles = makeStyles((theme) => ({
         bottom: 0,
         padding: theme.spacing(1),
         background: theme.palette.type === 'dark' ?
-            `linear-gradient(45deg, ${theme.palette.secondary.dark} 15%, ${theme.palette.primary.dark} 95%)`
+            `linear-gradient(10deg, ${theme.palette.secondary.dark} 25%, ${theme.palette.primary.dark} 75%)`
             :
-            `linear-gradient(45deg, ${theme.palette.secondary.light} 15%, ${theme.palette.primary.light} 95%)`,
+            `linear-gradient(10deg, ${theme.palette.secondary.light} 25%, ${theme.palette.primary.light} 75%)`,
         color: theme.palette.text.primary,
     },
     title: {
