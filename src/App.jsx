@@ -14,10 +14,7 @@ const useStyles = makeStyles((theme) => ({
   App: {
     textAlign: 'center',
     display: 'flex',
-    height: '100vh',
-    width: '99vw',
     flexDirection: 'column',
-    padding: theme.spacing(2)
   }
 }));
 

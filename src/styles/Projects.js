@@ -2,13 +2,19 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     grid: {
-        flexGrow: 1,
         justifyContent: 'center',
-        marginTop: theme.spacing(15)
+        alignItems: 'flex-start',
+        width: '100%',
+        marginTop: theme.spacing(15),
+        marginBottom: theme.spacing(25),
+        [theme.breakpoints.up('lg')]: {
+            marginTop: theme.spacing(10),
+            marginBottom: theme.spacing(10),
+        },
     },
     gridItem: {
         width: '20%',
-        minWidth: '200px'
+        minWidth: '250px'
     },
     paper: {
         backgroundColor: theme.palette.action.hover,

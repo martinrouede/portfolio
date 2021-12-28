@@ -4,7 +4,6 @@ import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 
 import styles from '../styles/Projects';
-//import GitLabChartLogo from '../logos/GitLabChart-logo.png';
 
 const Projects = (params) => {
 
@@ -18,7 +17,10 @@ const Projects = (params) => {
                         <Link href={aProject.url}>
                             <Paper className={classes.paper} elevation={5} >
                                 <Typography className={classes.titlePaper}>{aProject.name}</Typography>
-                                <img src={require(`../logos/${aProject.icon}`).default} className={classes.icon} />
+                                {aProject.icon ?
+                                    <img src={require(`../logos/${aProject.icon}`).default} className={classes.icon} />
+                                    : <></>
+                                }
                             </Paper>
                         </Link>
                     </Grid>
