@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     gridItem: {
+        margin: 15,
         width: '20%',
         minWidth: '250px'
     },

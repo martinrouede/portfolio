@@ -1,4 +1,3 @@
-import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
@@ -58,8 +57,8 @@ const Contacts = (params) => {
                 <Typography className={classes.title}>Contact Me</Typography>
                 <div>
                     {params.contacts.map((aContact) => (
-                        <Link href={`${aContact.url}${aContact.user}/`} key={aContact.name}>
-                            <FontAwesomeIcon icon={['fab', aContact.name]} className={classes.icon} />
+                        <Link href={`${aContact.url}${aContact.user}/`} key={aContact.name} className={classes.icon}>
+                            <FontAwesomeIcon icon={['fab', aContact.name]} />
                         </Link>
                     ))}
                 </div>

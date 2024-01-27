@@ -1,4 +1,4 @@
-import React from 'react';
+import { useMemo, useState } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -21,9 +21,9 @@ const useStyles = makeStyles((theme) => ({
 const App = () => {
 
   const classes = useStyles();
-  const [themeMode, setThemeMode] = React.useState(true);
+  const [themeMode, setThemeMode] = useState(true);
 
-  var theme = React.useMemo(
+  var theme = useMemo(
     () =>
       createMuiTheme({
         palette: {
@@ -40,7 +40,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Header themeMode={themeMode} setThemeMode={setThemeMode} name={properties.myName} />
-        <Projects projects={properties.projects}/>
+        <Projects projects={properties.projects} />
         <Contacts contacts={properties.contacts} />
       </ThemeProvider>
     </div>

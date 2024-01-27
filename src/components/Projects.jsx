@@ -11,14 +11,14 @@ const Projects = (params) => {
 
     return (
         <>
-            <Grid container className={classes.grid} spacing={5}>
+            <Grid container className={classes.grid}>
                 {params.projects.map((aProject) => (
                     <Grid item className={classes.gridItem} key={aProject.name}>
                         <Link href={aProject.url}>
                             <Paper className={classes.paper} elevation={5} >
                                 <Typography className={classes.titlePaper}>{aProject.name}</Typography>
                                 {aProject.icon ?
-                                    <img src={require(`../logos/${aProject.icon}`).default} className={classes.icon} />
+                                    <img src={require(`../logos/${aProject.icon}`)} className={classes.icon} />
                                     : <></>
                                 }
                             </Paper>

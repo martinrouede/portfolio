@@ -19,6 +19,8 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.primary,
     },
     title: {
+        textAlign: 'left',
+        textWrap: 'balance',
         [theme.breakpoints.down('sm')]: {
             fontSize: '1.3rem',
         },
@@ -38,10 +40,10 @@ const Header = params => {
     return (
         <>
             <AppBar className={classes.appBar}>
-                <Grid container direction='row' justify='center' alignItems='center'>
+                <Grid container direction='row' alignItems='center'>
                     <Typography className={classes.title}>{params.name} - My Personal Projects</Typography>
                 </Grid>
-                <Grid container direction='row' justify='flex-end' alignItems='center'>
+                <Grid container direction='row' alignItems='center' style={{width: 'auto', marginLeft: 16}}>
                     <SwitchTheme themeMode={params.themeMode} setThemeMode={params.setThemeMode} />
                 </Grid>
             </AppBar>
